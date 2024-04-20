@@ -1,0 +1,14 @@
+@media (max-width: 1600px) {
+  .container-sm {
+    max-width: 500px;
+  }
+}
+.container-sm input {
+  font-size: smaller;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+  font-size: 125%;
+  opacity: 0.5;
+  top: 0.3em;
+}

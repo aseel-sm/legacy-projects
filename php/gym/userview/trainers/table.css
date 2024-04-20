@@ -1,0 +1,40 @@
+
+th{
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  padding: 8px;
+  background-color: #000000ff;
+  color: white;
+
+}
+td {
+  border: 1px  #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+table{
+  border-collapse: collapse;
+  width:calc(100%);
+  color: #000000ff;
+  font-size: 15px;
+  overflow-x: scroll;
+}
+tbody{
+  overflow: scroll;
+}
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+.table{
+  overflow-x: scroll;
+  width:calc(100% - 20px);
+}
+.table::-webkit-scrollbar {
+    display: none;
+}
+@media screen and (max-width: 670px) {
+  .table::-webkit-scrollbar {
+      display: block;
+  }
+}

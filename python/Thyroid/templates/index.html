@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title Page-->
+    <title>Thyroid</title>
+
+    <!-- Icons font CSS-->
+    <link
+      href="static/vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="static/vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+      href="static/vendor/select2/select2.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="static/vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="static/css/main.css" rel="stylesheet" media="all" />
+  </head>
+
+  <body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+      <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+          <div class="card-heading">
+            <h2 class="title">Thyroid</h2>
+          </div>
+
+          <div class="card-body">
+            <form action="/predict" method="post" id="up-form" method="POST">
+              <div class="form-row m-b-55">
+                <div class="value">
+                  <div
+                    class="row row-refine"
+                    style="justify-content: space-between"
+                  >
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="sex">
+                            <option disabled="disabled" selected="selected">
+                              Gender
+                            </option>
+                            <option value="0">Male</option>
+                            <option value="1">Female</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="sick">
+                            <option disabled="disabled" selected="selected">
+                              Sick
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="pregnant">
+                            <option disabled="disabled" selected="selected">
+                              Pregnant
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row m-b-55">
+                <div class="value">
+                  <div
+                    class="row row-refine"
+                    style="justify-content: space-between"
+                  >
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="on_thyroxine">
+                            <option disabled="disabled" selected="selected">
+                              Thyroxine
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="query_hypothyroid">
+                            <option disabled="disabled" selected="selected">
+                              Hypothyroid(Q)
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="query_hyperthyroid">
+                            <option disabled="disabled" selected="selected">
+                              Hyperthyroid(Q)
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row m-b-55">
+                <div class="value">
+                  <div
+                    class="row row-refine"
+                    style="justify-content: space-evenly"
+                  >
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="goitre">
+                            <option disabled="disabled" selected="selected">
+                              Goitre
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 mx-2">
+                      <div class="input-group">
+                        <div
+                          class="rs-select2 js-select-simple select--no-search"
+                        >
+                          <select name="hypopituitary">
+                            <option disabled="disabled" selected="selected">
+                              Hypopituitary
+                            </option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
+                          <div class="select-dropdown"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row m-b-55">
+                <div class="value">
+                  <div class="row row-refine">
+                    <div class="col-3">
+                      <div class="input-group-desc">
+                        <input class="input--style-5" type="text" name="age" />
+                        <label class="label--desc">Age</label>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="input-group-desc">
+                        <input class="input--style-5" type="text" name="TSH" />
+                        <label class="label--desc">TSH</label>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="input-group-desc">
+                        <input class="input--style-5" type="text" name="T3" />
+                        <label class="label--desc">T3</label>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="input-group-desc">
+                        <input class="input--style-5" type="text" name="TT4" />
+                        <label class="label--desc">TT4</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div></div>
+            </form>
+            <button
+              class="btn btn--radius-2 btn--red"
+              id="predict-btn"
+              type="submit"
+            >
+              Predict Now
+            </button>
+          </div>
+
+          <div
+            id="result"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="static/vendor/select2/select2.min.js"></script>
+    <script src="static/vendor/datepicker/moment.min.js"></script>
+    <script src="static/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="static/js/global.js"></script>
+
+    <script>
+      $("#predict-btn").click(() => {
+        console.log("Hit");
+        let form = $("#up-form")[0];
+        console.log(form);
+        let data = new FormData(form);
+        console.log(data);
+        $.ajax({
+          type: "POST",
+          url: "/predict",
+          data: data,
+          contentType: false,
+          cache: false,
+          processData: false,
+          async: true,
+          success: function (data) {
+            console.log(data);
+            var resContent = "<h4>Result:" + data["pred"];
+            ("</h4>");
+            $("#result").html(resContent);
+            console.log(data);
+          },
+        });
+      });
+    </script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->
